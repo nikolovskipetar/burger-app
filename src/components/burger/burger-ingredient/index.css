@@ -1,0 +1,360 @@
+.BreadTop {
+  height: 85px;
+  overflow: hidden;
+  border-bottom-left-radius: 7px;
+  border-bottom-right-radius: 7px;
+  z-index: 2;
+  transform: translateY(-125px) rotate(-20deg);
+  animation: rotateRoll 1s linear 0.27s forwards;
+  position: relative;
+}
+
+.BreadTop::after {
+  content: "";
+  display: block;
+  width: 285px;
+  height: 350px;
+  border-radius: 80% 80% 50% 50% / 60% 60% 40% 40%;
+  position: absolute;
+  background: #f3a156;
+  left: -17px;
+  right: 0;
+  top: 6px;
+  margin: auto;
+}
+
+.BreadTop::before {
+  content: "";
+  display: block;
+  width: 281px;
+  height: 350px;
+  border-radius: 80% 80% 50% 50% / 62% 62% 40% 40%;
+  position: absolute;
+  background: #f6b880;
+  left: -15px;
+  top: 0;
+  z-index: -1;
+}
+
+.BreadBottom {
+  width: 252px;
+  height: 27px;
+  border-radius: 30px 30px 60px 60px;
+  background: #f3a156;
+  position: relative;
+}
+
+.BreadBottom::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 27px;
+  margin-top: 3px;
+  position: absolute;
+  background: #d79d68;
+  border-radius: inherit;
+  z-index: -2;
+}
+
+.Seeds {
+  background: #cb7527;
+  height: 6px;
+  width: 6px;
+  display: block;
+  position: absolute;
+  border-radius: 100%;
+  z-index: 2;
+}
+
+.Seeds:nth-child(1) {
+  left: 45px;
+  top: 40px;
+}
+.Seeds:nth-child(2) {
+  left: 95px;
+  top: 20px;
+}
+.Seeds:nth-child(3) {
+  left: 140px;
+  top: 20px;
+}
+.Seeds:nth-child(4) {
+  left: 170px;
+  top: 63px;
+}
+.Seeds:nth-child(5) {
+  left: 190px;
+  top: 35px;
+}
+.Seeds:nth-child(6) {
+  left: 30px;
+  top: 65px;
+}
+.Seeds:nth-child(7) {
+  left: 75px;
+  top: 50px;
+}
+.Seeds:nth-child(8) {
+  left: 132px;
+  top: 50px;
+}
+.Seeds:nth-child(9) {
+  left: 210px;
+  top: 70px;
+}
+.Seeds:nth-child(10) {
+  left: 100px;
+  top: 67px;
+}
+
+@keyframes rotateRoll {
+  30% {
+    transform: translateY(-40px) rotate(-20deg);
+  }
+  50% {
+    transform: translateY(0px) rotate(0deg);
+  }
+  75% {
+    transform: translateY(-4px) rotate(2deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.Salad {
+  transform: translateY(-75px) rotate(-15deg);
+  width: 252px;
+  height: 8px;
+  border-radius: 20px;
+  background: #5db255;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  z-index: 1;
+  animation: rotateLettuce 0.5s linear forwards;
+}
+
+.Salad1,
+.Salad2 {
+  display: flex;
+}
+
+.Salad1 {
+  margin-top: -4px;
+}
+
+.Salad2 {
+  margin-top: -5px;
+}
+
+.SaladItem {
+  width: 14px;
+  height: 10px;
+  border-radius: 100%;
+  background: #5db255;
+}
+
+@keyframes rotateLettuce {
+  35% {
+    transform: translateY(-55px) rotate(-10deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.Cheese {
+  transform: translateY(-45px) rotate(-10deg);
+  width: 252px;
+  height: 9px;
+  border-radius: 20px;
+  background: #f6cf54;
+  position: relative;
+  margin-bottom: -3px;
+  animation: rotateCheese 0.5s linear forwards;
+}
+
+.CheeseEl {
+  background: inherit;
+  position: absolute;
+}
+
+.CheeseElSmallRight {
+  right: 57px;
+  animation-delay: 0.9s;
+}
+
+.CheeseSmallLeft {
+  animation-delay: 0.7s;
+  left: 25px;
+}
+
+.CheeseElBig {
+  width: 42px;
+  height: 42px;
+  border-radius: 4px;
+  right: 20px;
+  top: -25px;
+  transform: translateY(-42px) rotate(45deg);
+  opacity: 0;
+  animation: meltCheese 0.9s 1.1s forwards;
+}
+
+.CheeseElSmall {
+  width: 16px;
+  height: 16px;
+  border-radius: 1.5px;
+  top: -1px;
+  transform: translateY(-16px) rotate(45deg);
+  opacity: 0;
+  animation-name: meltCheese;
+  animation-duration: 0.55s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes meltCheese {
+  25% {
+    opacity: 1;
+  }
+  100% {
+    transform: translateY(0) rotate(45deg);
+    opacity: 1;
+  }
+}
+@keyframes rotateCheese {
+  35% {
+    transform: translateY(-35px) rotate(-7deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.Meat {
+  transform: translateY(-30px) rotate(-5deg);
+  position: relative;
+  width: 252px;
+  height: 38px;
+  border-radius: 20px;
+  background: #a84545;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: -1;
+  overflow: hidden;
+  animation: rotateChop 0.5s linear forwards;
+}
+
+.Meat1,
+.Meat2 {
+  display: flex;
+  justify-content: space-around;
+}
+
+.MeatEl {
+  border-radius: 5px 5px 0 0;
+  width: 5px;
+  height: 6px;
+  background: #8f3b3b;
+}
+
+@keyframes rotateChop {
+  35% {
+    transform: translateY(-10px) rotate(-3deg);
+  }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+  }
+}
+
+.Tomato {
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  z-index: -3;
+}
+
+.TomatoEl {
+  width: 80px;
+  height: 12px;
+  display: block;
+  background: #e43d3d;
+  border-radius: 20px;
+}
+
+.TomatoEl:nth-child(1) {
+  transform: translateY(-85px) rotate(-25deg);
+  animation: rotateTomato 0.55s linear forwards;
+}
+
+.TomatoEl:nth-child(2) {
+  transform: translateY(-105px) rotate(-25deg);
+  animation: rotateTomato 0.55s linear 0.12s forwards;
+}
+
+.TomatoEl:nth-child(3) {
+  transform: translateY(-125px) rotate(-25deg);
+  animation: rotateTomato 0.55s linear 0.24s forwards;
+}
+
+@keyframes rotateTomato {
+  90% {
+    transform: translateY(-5px) rotate(-10deg);
+ }
+  100% {
+    transform: translateY(0px) rotate(0deg);
+ }
+}
+
+.Bacon {
+  transform: translateY(-45px) rotate(-10deg);
+  width: 222px;
+  height: 9px;
+  border-radius: 20px;
+  background: #F48386;
+  position: relative;
+  margin-bottom: -6px;
+  margin-top: 2px;
+  margin-left: auto;
+  margin-right: auto;
+  animation: rotateCheese 0.5s linear forwards;
+}
+
+.BaconEl {
+  background: inherit;
+  position: absolute;
+}
+
+.BaconElSmallRight {
+  right: 57px;
+  animation-delay: 0.9s;
+}
+
+.BaconSmallLeft {
+  animation-delay: 0.7s;
+  left: 25px;
+}
+
+.BaconElBig {
+  width: 42px;
+  height: 42px;
+  border-radius: 4px;
+  right: 20px;
+  top: -25px;
+  transform: translateY(-42px) rotate(45deg);
+  opacity: 0;
+  animation: meltCheese 0.9s 1.1s forwards;
+}
+
+.BaconElSmall {
+  width: 16px;
+  height: 16px;
+  border-radius: 1.5px;
+  top: -1px;
+  transform: translateY(-16px) rotate(45deg);
+  opacity: 0;
+  animation-name: meltCheese;
+  animation-duration: 0.55s;
+  animation-fill-mode: forwards;
+}

@@ -1,0 +1,25 @@
+.Burger {
+  width: 252px;
+  margin: auto;
+  /* position: absolute; */
+  left: 0;
+  right: 0;
+  bottom: 0;
+  top: 0;
+  margin-bottom: 50px;
+  text-align: center;
+}
+
+.Burger::after {
+  content: "";
+  display: block;
+  width: calc(100% + 20px);
+  height: 5px;
+  background: #a9a9a9;
+  opacity: 0.4;
+  margin-top: 1px;
+  border-radius: 100%;
+  margin-left: -10px;
+  position: relative;
+  z-index: -3;
+}
