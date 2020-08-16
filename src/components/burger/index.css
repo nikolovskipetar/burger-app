@@ -3,6 +3,7 @@
   margin: auto;
   margin-bottom: 50px;
   text-align: center;
+  min-height: 240px;
 }
 
 .Burger::after {
